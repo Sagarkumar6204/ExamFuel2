@@ -15,25 +15,22 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const text = "Learn To Become Top 1%";
+const typingElement = document.getElementById("typingText");
+let index = 0;
 
-
-  const text = "Learn To Become Top 1%";
-  const typingElement = document.getElementById("typingText");
-  let index = 0;
-
-  function type() {
-    if (index < text.length) {
-      typingElement.innerHTML += text.charAt(index);
-      index++;
-      setTimeout(type, 95); // typing speed
-    } else {
-      setTimeout(() => {
-        typingElement.innerHTML = ""; // clear text
-        index = 0; // reset index
-        type(); // restart typing
-      }, 1000); // delay before restarting
-    }
+function type() {
+  if (index < text.length) {
+    typingElement.innerHTML += text.charAt(index);
+    index++;
+    setTimeout(type, 95); // typing speed
+  } else {
+    setTimeout(() => {
+      typingElement.innerHTML = ""; // clear text
+      index = 0; // reset index
+      type(); // restart typing
+    }, 1000); // delay before restarting
   }
+}
 
-  document.addEventListener("DOMContentLoaded", type);
-
+document.addEventListener("DOMContentLoaded", type);
