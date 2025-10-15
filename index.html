@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamFuel - Your Ultimate Study Resource Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+     <link rel="icon" href="/StudyHub/logo - Copy.png" type="image/png" />
+    <style>
+    .scroll-text {
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      font-weight: bold;
+     background: linear-gradient(to right, #ef6808, #00ffae, #d9ff00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      white-space: nowrap;
+      display: inline-block;
+      animation: scroll-left 10s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .scroll-container {
+      overflow: hidden;
+      width: 100%;
+      background: #000; /* optional dark bg for contrast */
+      padding: 10px 0;
+    }
+  </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-to-r from-purple-700 to-indigo-600 text-white">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="navbar fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-20 py-4 bg-white/20"
+    >
+      <div class="flex items-center space-x-2">
+        <img src="logo - Copy.png" alt="" class="rounded-full" width="50px" />
+        <span class="text-2xl text-purple-700 font-bold" style="font-family: 'Montserrat', sans-serif;"
+          >ExamFuel</span>
+        
+      </div>
+      
+
+      <div class="hidden md:flex space-x-8 text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
+        <a href="Previous/previous.html" class="hover:text-indigo-600 transition"
+          >Previous Year Paper</a
+        >
+        <a href="Notes/notes.html" class="hover:text-indigo-600 transition"
+          >Notes</a
+        >
+        <a href="Upload/upload.html" class="hover:text-indigo-600 transition"
+          >Upload</a
+        >
+         <button class="bg-indigo-700 text-white px-5 py-2 rounded-lg hover:bg-indigo-800"><a href="#startlearning">Start Learning</a></button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-gray-800 text-2xl">☰</button>
+    </nav>
+  
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-[70px] left-0 w-full bg-white/95 text-gray-800 flex flex-col space-y-4 px-6 py-4 md:hidden z-40 backdrop-blur-md"
+    >
+       <a href="/StudyHub/index.html" class="hover:text-indigo-600 transition">Home</a>
+     <a href="/StudyHub/Previous/previous.html" class="hover:text-indigo-600 transition">Subjects</a>
+      <a href="/StudyHub/Notes/notes.html" class="hover:text-indigo-600 transition">Notes</a>
+            <a href="#about" class="hover:text-indigo-600">About</a>
+      <a href="#contact" class="hover:text-indigo-600">Contact</a>
+    </div>
+
+    <div class="hero1"></div>
+
+    <div class="scroll-container">
+    <span class="scroll-text">
+     The "Sigma Development" Course will Coming Soon! By Sagar & Niraj 🚀
+    </span>
+  </div><!-- Hero Section -->
+    <section
+      id="hero"
+      class="pt-28 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16"
+    >
+      <div class="md:w-1/2 space-y-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Your Ultimate Study <br />
+          Resource Hub
+        </h1>
+        <h2 id="typingText" class="text-2xl font-bold text-indigo-700"></h2>
+
+        <p class="text-lg text-gray-200">
+          Access previous year questions, comprehensive notes, and study
+          materials for all subjects in one place.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4"
+        >
+          <button
+            class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-md font-medium transition"
+          >
+            <a href="#explore">Explore Resources →</a>
+          </button>
+          <button
+            class="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition"
+          >
+            <a href="./Upload/upload.html">Contribute</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+        <img
+          src="man-seated-ground-working-laptop-computer-study-success-trending-simple-minimalist-flat-vector-illustration_538213-53546.jpg"
+          alt="Education Illustration"
+          class="rounded-2xl shadow-2xl w-full max-w-lg"
+        />
+      </div>
+    </section>
+
+    <!-- Stats + Features Section -->
+    <section class="bg-gray-50 text-gray-900 py-16">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <!-- Stats -->
+        <div
+          class="flex flex-col md:flex-row justify-around items-center text-center mb-12 space-y-6 md:space-y-0"
+        >
+          <div>
+            <h2 class="text-3xl font-bold text-indigo-900">500+</h2>
+            <p class="text-gray-600">Question Papers</p>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-indigo-900">1000+</h2>
+            <p class="text-gray-600">Study Notes</p>
+          </div>
+          <div id="startlearning">
+            <h2 class="text-3xl font-bold text-indigo-900">10K+</h2>
+            <p class="text-gray-600">Happy Students</p>
+          </div>
+        </div>
+
+        <!-- Section Header -->
+        <div class="text-center mb-12" >
+          <h2 class="text-3xl md:text-4xl font-extrabold text-indigo-900">
+            Everything You Need to Succeed
+          </h2>
+          <p class="text-gray-600 mt-3">
+            Comprehensive resources designed to help you prepare effectively for
+            your exams
+          </p>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="grid gap-8 md:grid-cols-3" id="explore">
+          <!-- Card 1 -->
+          <div
+            class="bg-white shadow-md hover:shadow-lg rounded-xl p-8 transition"
+          >
+            <div class="text-indigo-900 text-4xl mb-4">📄</div>
+            <h3 class="text-xl font-semibold text-indigo-900 mb-2">
+              Previous Year Questions
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Access comprehensive collection of past exam papers across all
+              subjects.
+            </p>
+            <a href="./Previous/previous.html" class="text-indigo-700 font-medium hover:underline"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white shadow-md hover:shadow-lg rounded-xl p-8 transition"
+          >
+            <div class="text-indigo-900 text-4xl mb-4">📘</div>
+            <h3 class="text-xl font-semibold text-indigo-900 mb-2">
+              Study Notes
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Detailed notes curated by top students to help you excel.
+            </p>
+            <a href="./Notes/notes.html" class="text-indigo-700 font-medium hover:underline"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white shadow-md hover:shadow-lg rounded-xl p-8 transition"
+          >
+            <div class="text-indigo-900 text-4xl mb-4">⬆️</div>
+            <h3 class="text-xl font-semibold text-indigo-900 mb-2">
+              Contribute Resources
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Share your notes and help fellow students succeed.
+            </p>
+            <a href="./Upload/upload.html" class="text-indigo-700 font-medium hover:underline"
+              >Learn More →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="bg-gray-50 text-gray-900 py-20 px-6 md:px-20 text-center"
+    >
+      <h2 class="text-4xl font-extrabold text-indigo-900 mb-6">
+        About ExamFuel
+      </h2>
+      <p class="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
+        ExamFuel is designed to empower students by providing access to quality
+        learning materials — including previous year papers, curated study
+        notes, and resources from peers across the country. We believe that
+        collaboration and access to the right content can help every learner
+        achieve academic excellence.
+      </p>
+    </section>
+
+    <!-- Subjects Section -->
+    <section id="subjects" class="bg-white text-gray-900 py-20">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+        <h2 class="text-4xl font-extrabold text-indigo-900 mb-10">
+          Popular Subjects
+        </h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div
+            class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <div class="text-5xl mb-4">💻</div>
+            <h3 class="text-xl font-semibold text-indigo-900">
+              Computer Science
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Programming, DSA, Web Development and more.
+            </p>
+          </div>
+          <div
+            class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <div class="text-5xl mb-4">⚛️</div>
+            <h3 class="text-xl font-semibold text-indigo-900">Fundamentals</h3>
+            <p class="text-gray-600 mt-2">
+              Essential topics from DBMS, OS, and Computer Network. build your basics strong.
+            </p>
+          </div>
+          <div
+            class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <div class="text-5xl mb-4">📐</div>
+            <h3 class="text-xl font-semibold text-indigo-900">Mathematics</h3>
+            <p class="text-gray-600 mt-2">
+              Formulas, theorems, and past year question sets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-gray-50 py-20 text-gray-900">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+        <h2 class="text-4xl font-extrabold text-indigo-900 mb-10">
+          What Students Say
+        </h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div
+            class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <p class="text-gray-600 italic mb-4">
+              “ExamFuel helped me revise all my subjects efficiently. The
+              previous year papers were a lifesaver!”
+            </p>
+            <h4 class="font-bold text-indigo-700">– Aditi Sharma</h4>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <p class="text-gray-600 italic mb-4">
+              “I found all my semester notes in one place. Such a helpful and
+              easy-to-use platform.”
+            </p>
+            <h4 class="font-bold text-indigo-700">– Rahul Mehta</h4>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <p class="text-gray-600 italic mb-4">
+              “Contributing my notes here helped others — and I even improved my
+              own understanding while sharing!”
+            </p>
+            <h4 class="font-bold text-indigo-700">– Sneha Gupta</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section
+      class="bg-gradient-to-r from-purple-700 to-indigo-700 py-20 text-center"
+    >
+      <h2 class="text-4xl font-bold mb-6">
+        Join the ExamFuel Community Today!
+      </h2>
+      <p class="text-lg text-gray-200 mb-8">
+        Start learning smarter, not harder — explore, share, and succeed
+        together.
+      </p>
+      <button
+        class="bg-white text-purple-700 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition"
+      >
+        <a href="./Previous/previous.html" class="hover:text-indigo-600 transition"
+          >Previous Year Questions →</a
+        >
+      </button>
+
+      <button
+        class="bg-white text-purple-700 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition"
+      >
+        <a href="./Notes/notes.html" class="hover:text-indigo-600 transition"
+          >Notes →</a
+        >
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-10">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-4 gap-12">
+        <!-- About -->
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">About ExamFuel</h3>
+          <p class="text-gray-400 text-sm">
+            ExamFuel is your one-stop platform for quality notes, question
+            papers, and academic collaboration. Learn, share, and grow with a
+            community of passionate learners.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="index.html" class="hover:text-indigo-400 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="hover:text-indigo-400 transition"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="./Notes/notes.html"
+                class="hover:text-indigo-400 transition"
+                >Notes</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">Resources</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a
+                href="./Previous/previous.html"
+                class="hover:text-indigo-400 transition"
+                >Previous Year Papers</a
+              >
+            </li>
+            <li>
+              <a
+                href="./Notes/notes.html"
+                class="hover:text-indigo-400 transition"
+                >Study Notes</a
+              >
+            </li>
+            <li>
+              <a
+                href="./Upload/upload.html"
+                class="hover:text-indigo-400 transition"
+                >Upload Notes</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-400 text-sm mb-2">📧 support@ExamFuel.com</p>
+          <p class="text-gray-400 text-sm mb-4">📍 Giridh, Jharkhand</p>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500"
+      >
+        © 2025 ExamFuel. All rights reserved. | Built with ❤️ by Niraj & Sagar
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
