@@ -2,57 +2,75 @@
   {
     "subjectName": "DSA",
     "dateOfUpload": "2025-03-10",
-    "fileLink": "https://drive.google.com/file/d/1U3iPwO6ybEbVNpvkaIx1sKDYvE-o_Glr/view?usp=drive_link",
+    "session": "2020-21",
+    "branch": "BCA",
+    "college": "SIT",
+    "fileLink": "https://drive.google.com/file/d/1a2b3c4d5e6f7g8h9/view",
     "uploadedBy": "Niraj Kumar Verma"
   },
   {
-    "subjectName": "DBMS",
-    "dateOfUpload": "2025-03-12",
-    "fileLink": "https://drive.google.com/file/d/13-XEV5S44vb8YhnU2z-IFJ382dydLx1H/view?usp=drive_link",
-    "uploadedBy": "Sagar Kumar"
-  },
-  {
-    "subjectName": "Operating Systems",
-    "dateOfUpload": "2025-03-15",
-    "fileLink": "https://drive.google.com/file/d/2h3g4f5d6e7j8k9l0/view",
-    "uploadedBy": "Aditya Sharma"
-  },
- 
-  {
-    "subjectName": "English Communication",
-    "dateOfUpload": "2025-04-05",
-    "fileLink": "https://drive.google.com/file/d/1AzcfgGfFSXV_WawOni3y6GVEa1i-AeMY/view?usp=drive_link",
-    "uploadedBy": "Rahul Verma"
-  },
-  {
-    "subjectName": "Environmental Science",
-    "dateOfUpload": "2025-04-09",
-    "fileLink":"https://drive.google.com/file/d/1U3iPwO6ybEbVNpvkaIx1sKDYvE-o_Glr/view?usp=drive_link",
-    "uploadedBy": "Ananya Gupta"
-  },
-  {
-    "subjectName": "Data Structures",
-    "dateOfUpload": "2025-05-01",
-    "fileLink": "https://drive.google.com/file/d/8k7l6m5n4o3p2q1r0/view",
-    "uploadedBy": "Harsh Vandana Sharma"
-  },
-  {
     "subjectName": "Computer Networks",
-    "dateOfUpload": "2025-05-10",
-    "fileLink": "https://drive.google.com/file/d/1IWw6NosWk2yTfNXyWrYqVeqmNzep87HS/view?usp=drive_link",
-    "uploadedBy": "Niraj Sharma"
+    "dateOfUpload": "2025-02-05",
+    "session": "2021-22",
+    "branch": "BCA",
+    "college": "SIT",
+    "fileLink": "https://drive.google.com/file/d/2b3c4d5e6f7g8h9i0/view",
+    "uploadedBy": "Riya Sharma"
   },
   {
-    "subjectName": "C-programming",
-    "dateOfUpload": "2025-05-10",
-    "fileLink": "https://drive.google.com/file/d/1-qq5EVFz3EIZC4P0vHbeaF0I-AvFXvxT/view?usp=drive_link",
-    "uploadedBy": "Sagar Kumar"
-  }
-  ,
+    "subjectName": "Database Management System",
+    "dateOfUpload": "2024-12-21",
+    "session": "2019-20",
+    "branch": "BCA",
+    "college": "SIT",
+    "fileLink": "https://drive.google.com/file/d/3c4d5e6f7g8h9i0j1/view",
+    "uploadedBy": "Amit Yadav"
+  },
   {
-    "subjectName": "Maths-II",
-    "dateOfUpload": "2025-05-10",
-    "fileLink": "https://drive.google.com/file/d/1s7Ry52Cd49uxXrMZMCwrDfUtfjqLmGF-/view?usp=drive_link",
-    "uploadedBy": "Sagar Kumar"
+    "subjectName": "Operating System",
+    "dateOfUpload": "2025-01-17",
+    "session": "2020-21",
+    "branch": "BCA",
+    "college": "SIT",
+    "fileLink": "https://drive.google.com/file/d/4d5e6f7g8h9i0j1k2/view",
+    "uploadedBy": "Priya Singh"
+  },
+  {
+    "subjectName": "Web Development",
+    "dateOfUpload": "2025-04-02",
+    "session": "2022-23",
+    "branch": "BCA",
+    "college": "SIT",
+    "fileLink": "https://drive.google.com/file/d/5e6f7g8h9i0j1k2l3/view",
+    "uploadedBy": "Niraj Kumar Verma"
+  },
+
+  {
+    "subjectName": "Data Communication",
+    "dateOfUpload": "2024-10-07",
+    "session": "2021-22",
+    "branch": "BCA",
+    "college": "SIT",
+    "fileLink": "https://drive.google.com/file/d/5o6p7q8r9s0t1u2v3/view",
+    "uploadedBy": "Pooja Raj"
+  },
+  {
+    "subjectName": "Web Technology",
+    "dateOfUpload": "2025-01-27",
+    "session": "2022-23",
+    "branch": "BCA",
+    "college": "SIT",
+    "fileLink": "https://drive.google.com/file/d/6p7q8r9s0t1u2v3w4/view",
+    "uploadedBy": "Niraj Kumar Verma"
+  },
+
+  {
+    "subjectName": "Theory of Computation",
+    "dateOfUpload": "2025-03-25",
+    "session": "2022-23",
+    "branch": "BCA",
+    "college": "SIT",
+    "fileLink": "https://drive.google.com/file/d/9s0t1u2v3w4x5y6z7/view",
+    "uploadedBy": "Sakshi Mehta"
   }
 ]

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - ExamFuel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-b from-blue-50 to-blue-100 text-gray-900">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="navbar fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-20 py-4 bg-white/20"
+    >
+      <div class="flex items-center space-x-2">
+        <img src="/Assests/logo.png" alt="" class="rounded-full" width="50px" />
+        <span class="text-2xl text-purple-700 font-bold"
+          >Exam<span class="text-indigo-600">Fuel</span></span
+        >
+      </div>
+
+      <div class="hidden md:flex space-x-8 text-gray-800 font-medium">
+        <a href="/index.html" class="py-2 hover:text-indigo-600 transition"
+          >Home</a
+        >
+        <a
+          href="/Previous/index.html"
+          class="py-2 hover:text-indigo-600 transition"
+          >Previous Year Paper</a
+        >
+        <a
+          href="/Notes/index.html"
+          class="py-2 hover:text-indigo-600 transition"
+          >Notes</a
+        >
+        <a
+          href="/About/index.html"
+          class="py-2 hover:text-indigo-600 transition"
+          >About Us</a
+        >
+        <a
+          href="/Upload/upload.html"
+          class="bg-indigo-700 text-white px-5 py-2 rounded-lg hover:bg-indigo-800"
+          >Upload</a
+        >
+
+        <a
+          href="#"
+          class="bg-red-700 px-5 py-2 rounded-full hover:bg-red-800 text-white"
+        >
+          <i class="ri-logout-box-r-line text-white"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-gray-800 text-2xl">☰</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-[70px] left-0 w-full bg-white/95 text-gray-800 flex flex-col space-y-4 px-6 py-4 md:hidden z-40 backdrop-blur-md"
+    >
+      <a href="/index.html" class="py-2 hover:text-indigo-600 transition"
+        >Home</a
+      >
+      <a
+        href="/Previous/index.html"
+        class="py-2 hover:text-indigo-600 transition"
+        >Previous Year Paper</a
+      >
+      <a href="/Notes/index.html" class="py-2 hover:text-indigo-600 transition"
+        >Notes</a
+      >
+      <a href="/About/index.html" class="py-2 hover:text-indigo-600 transition"
+        >About Us</a
+      >
+      <a
+        href="/Upload/upload.html"
+        class="bg-indigo-700 text-white px-5 py-2 rounded-lg hover:bg-indigo-800 w-fit"
+        >Upload</a
+      >
+
+      <a
+        href="#"
+        class="bg-red-700 px-5 py-2 rounded-full hover:bg-red-800 text-white w-fit"
+      >
+        <i class="ri-logout-box-r-line text-white"></i>
+      </a>
+    </div>
+
+    <div class="h-20 w-full bg-gray-50"></div>
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-24"
+    >
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+          About <span class="text-blue-200">ExamFuel</span>
+        </h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+          Empowering students with high-quality notes and previous year papers
+          to make learning smarter, easier, and more accessible.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="py-20">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <img
+          src="/Assests/hero.jpg"
+          alt="Study"
+          class="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
+        />
+        <div>
+          <h2 class="text-3xl font-bold mb-6 text-blue-800">Our Mission</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            At <span class="font-semibold text-blue-700">ExamFuel</span>, our
+            goal is to make academic learning seamless by providing access to
+            reliable and well-structured study materials. We aim to build a
+            collaborative student community where knowledge is shared freely and
+            efficiently.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Whether you’re preparing for exams or catching up on notes, ExamFuel
+            ensures you have the right resources at your fingertips.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-gradient-to-r from-blue-100 to-indigo-100 py-20">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-12 text-blue-800">
+          Why Choose ExamFuel?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <h3 class="text-xl font-semibold mb-3 text-indigo-800">
+              Extensive Resources
+            </h3>
+            <p class="text-gray-600">
+              Explore a wide range of notes and previous year papers covering
+              multiple subjects and semesters.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <h3 class="text-xl font-semibold mb-3 text-indigo-800">
+              User-Friendly Platform
+            </h3>
+            <p class="text-gray-600">
+              Simple, clean, and organized interface designed for smooth
+              navigation and quick access to materials.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <h3 class="text-xl font-semibold mb-3 text-indigo-800">
+              Community Focused
+            </h3>
+            <p class="text-gray-600">
+              Built by students, for students — fostering a spirit of
+              collaboration and shared learning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-12 text-blue-800">Meet Our Team</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div
+            class="bg-white rounded-2xl shadow-xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              src="#"
+              alt="Frontend Developer"
+              class="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-blue-500"
+            />
+            <h3 class="text-xl font-semibold text-blue-700">
+              Niraj Kumar Verma
+            </h3>
+            <p class="text-gray-600 mb-3">Frontend Developer</p>
+            <p class="text-gray-500 text-sm">
+              Passionate about crafting beautiful, responsive, and user-friendly
+              web experiences using modern technologies.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              src="#"
+              alt="Backend Developer"
+              class="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-blue-500"
+            />
+            <h3 class="text-xl font-semibold text-blue-700">Sagar Kumar</h3>
+            <p class="text-gray-600 mb-3">Backend Developer</p>
+            <p class="text-gray-500 text-sm">
+              Focused on building secure, scalable, and high-performance systems
+              to power smooth user experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-6">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-4 gap-12">
+        <!-- About -->
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">About ExamFuel</h3>
+          <p class="text-gray-400 text-sm">
+            ExamFuel is your one-stop platform for quality notes, question
+            papers, and academic collaboration. Learn, share, and grow with a
+            community of passionate learners.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="/index.html" class="hover:text-indigo-400 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/About/index.html"
+                class="hover:text-indigo-400 transition"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Notes/index.html"
+                class="hover:text-indigo-400 transition"
+                >Notes</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">Resources</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a
+                href="/Previous/index.html"
+                class="hover:text-indigo-400 transition"
+                >Previous Year Papers</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Notes/index.html"
+                class="hover:text-indigo-400 transition"
+                >Study Notes</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Upload/upload.html"
+                class="hover:text-indigo-400 transition"
+                >Upload Notes</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-400 text-sm mb-2">📧 examfuel@gmail.com</p>
+          <p class="text-gray-400 text-sm mb-4">📍 Giridh, Jharkhand</p>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500 px-5"
+      >
+        © 2025 ExamFuel. All rights reserved. | Built with ❤️ by Niraj & Sagar
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
