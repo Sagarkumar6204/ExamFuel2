@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXAMFUEL - Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <!-- Background animation layer -->
+  <div class="animated-bg"></div>
+
+  <!-- Login form container -->
+  <div class="login-container">
+    <h1>EXAMFUEL</h1>
+
+    <form id="loginForm" method="POST">
+      <div class="input-field">
+        <input type="email" id="email" placeholder="Email Address" required >
+        <input type="tel" id="phone" placeholder="Phone Number" style="display:none;" >
+      </div>
+
+      <div class="input-field">
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <div class="toggle" id="toggleLoginType">Login with Phone instead</div>
+
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <div class="social-login">
+      <button class="google-btn">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google"> Google
+      </button>
+      <button class="fb-btn">
+        <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook"> Facebook
+      </button>
+    </div>
+
+    <div class="register">
+      Don’t have an account? <a href="register.html">Register</a>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
+  
