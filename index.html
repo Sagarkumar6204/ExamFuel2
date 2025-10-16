@@ -1,45 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ExamFuel - Your Ultimate Study Resource Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
-     <link rel="icon" href="/StudyHub/logo - Copy.png" type="image/png" />
-    <style>
-    .scroll-text {
-      font-size: 1.3rem;
-      letter-spacing: 3px;
-      font-weight: bold;
-     background: linear-gradient(to right, #ef6808, #00ffae, #d9ff00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
-      white-space: nowrap;
-      display: inline-block;
-      animation: scroll-left 10s linear infinite;
-    }
-
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-    .scroll-container {
-      overflow: hidden;
-      width: 100%;
-      background: #000; /* optional dark bg for contrast */
-      padding: 10px 0;
-    }
-  </style>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-gradient-to-r from-purple-700 to-indigo-600 text-white">
@@ -49,62 +18,112 @@
       class="navbar fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-20 py-4 bg-white/20"
     >
       <div class="flex items-center space-x-2">
-        <img src="logo - Copy.png" alt="" class="rounded-full" width="50px" />
-        <span class="text-2xl text-purple-700 font-bold" style="font-family: 'Montserrat', sans-serif;"
-          >ExamFuel</span>
-        
+        <img src="/Assests/logo.png" alt="" class="rounded-full" width="50px" />
+        <span class="text-2xl text-purple-700 font-bold"
+          >Exam<span class="text-indigo-600">Fuel</span></span
+        >
       </div>
-      
 
       <div class="hidden md:flex space-x-8 text-gray-800 font-medium">
-        <a href="/index.html" class="hover:text-indigo-600 transition">Home</a>
-        <a href="/Previous/previous.html" class="hover:text-indigo-600 transition"
+        <a href="/index.html" class="py-2 hover:text-indigo-600 transition"
+          >Home</a
+        >
+        <a
+          href="/Previous/index.html"
+          class="py-2 hover:text-indigo-600 transition"
           >Previous Year Paper</a
         >
-        <a href="/Notes/notes.html" class="hover:text-indigo-600 transition"
+        <a
+          href="/Notes/index.html"
+          class="py-2 hover:text-indigo-600 transition"
           >Notes</a
         >
-        <a href="/Upload/upload.html" class="hover:text-indigo-600 transition"
+        <a
+          href="/About/index.html"
+          class="py-2 hover:text-indigo-600 transition"
+          >About Us</a
+        >
+        <a
+          href="/Upload/upload.html"
+          class="bg-indigo-700 text-white px-5 py-2 rounded-lg hover:bg-indigo-800"
           >Upload</a
         >
-         <button class="bg-indigo-700 text-white px-5 py-2 rounded-lg hover:bg-indigo-800"><a href="#startlearning">Start Learning</a></button>
+
+        <a
+          href="#"
+          class="bg-red-700 px-5 py-2 rounded-full hover:bg-red-800 text-white"
+        >
+          <i class="ri-logout-box-r-line text-white"></i>
+        </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <button id="menu-btn" class="md:hidden text-gray-800 text-2xl">☰</button>
     </nav>
-  
 
     <!-- Mobile Menu -->
     <div
       id="mobile-menu"
       class="hidden fixed top-[70px] left-0 w-full bg-white/95 text-gray-800 flex flex-col space-y-4 px-6 py-4 md:hidden z-40 backdrop-blur-md"
     >
-       <a href="/index.html" class="hover:text-indigo-600 transition">Home</a>
-     <a href="/Previous/previous.html" class="hover:text-indigo-600 transition">Subjects</a>
-      <a href="/Notes/notes.html" class="hover:text-indigo-600 transition">Notes</a>
-            <a href="#about" class="hover:text-indigo-600">About</a>
-      <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      <a href="/index.html" class="py-2 hover:text-indigo-600 transition"
+        >Home</a
+      >
+      <a
+        href="/Previous/index.html"
+        class="py-2 hover:text-indigo-600 transition"
+        >Previous Year Paper</a
+      >
+      <a href="/Notes/index.html" class="py-2 hover:text-indigo-600 transition"
+        >Notes</a
+      >
+      <a href="/About/index.html" class="py-2 hover:text-indigo-600 transition"
+        >About Us</a
+      >
+      <a
+        href="/Upload/upload.html"
+        class="bg-indigo-700 text-white px-5 py-2 rounded-lg hover:bg-indigo-800 w-fit"
+        >Upload</a
+      >
+
+      <a
+        href="#"
+        class="bg-red-700 px-5 py-2 rounded-full hover:bg-red-800 text-white w-fit"
+      >
+        <i class="ri-logout-box-r-line text-white"></i>
+      </a>
     </div>
 
-    <div class="hero1"></div>
+    <!-- Hero Section -->
 
-    <div class="scroll-container">
-    <span class="scroll-text">
-     The "Sigma Development" Course will Coming Soon! By Sagar & Niraj 🚀
-    </span>
-  </div><!-- Hero Section -->
+    <div class="h-20 w-full bg-gray-50"></div>
+
+    <!-- Marquee Announcement -->
+    <div
+      class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-3 overflow-hidden relative"
+    >
+      <marquee
+        behavior="scroll"
+        direction="left"
+        scrollamount="10"
+        onmouseover="this.stop();"
+        onmouseout="this.start();"
+        class="text-lg font-semibold tracking-wide"
+      >
+        🚀 New Full Stack Course Launched By Sagar — Learn Frontend, Backend,
+        and Database Integration with Hands-on Projects!
+      </marquee>
+    </div>
+
     <section
-      id="hero"
-      class="pt-28 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16"
+      class="pt-20 pb-20 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16"
     >
       <div class="md:w-1/2 space-y-6">
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
           Your Ultimate Study <br />
           Resource Hub
         </h1>
-        <h2 id="typingText" class="text-2xl font-bold text-indigo-700"></h2>
-
+        <h2 id="typingText" class="text-2xl font-bold"></h2>
         <p class="text-lg text-gray-200">
           Access previous year questions, comprehensive notes, and study
           materials for all subjects in one place.
@@ -116,7 +135,7 @@
           <button
             class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-md font-medium transition"
           >
-            <a href="#explore-every">Explore Resources →</a>
+            <a href="./Previous/index.html">Explore Resources →</a>
           </button>
           <button
             class="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition"
@@ -128,7 +147,7 @@
 
       <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
         <img
-          src="man-seated-ground-working-laptop-computer-study-success-trending-simple-minimalist-flat-vector-illustration_538213-53546.jpg"
+          src="/Assests/hero.jpg"
           alt="Education Illustration"
           class="rounded-2xl shadow-2xl w-full max-w-lg"
         />
@@ -150,14 +169,14 @@
             <h2 class="text-3xl font-bold text-indigo-900">1000+</h2>
             <p class="text-gray-600">Study Notes</p>
           </div>
-          <div id="startlearning">
+          <div>
             <h2 class="text-3xl font-bold text-indigo-900">10K+</h2>
             <p class="text-gray-600">Happy Students</p>
           </div>
         </div>
 
         <!-- Section Header -->
-        <div class="text-center mb-12" id="explore-every">
+        <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-extrabold text-indigo-900">
             Everything You Need to Succeed
           </h2>
@@ -168,7 +187,7 @@
         </div>
 
         <!-- Feature Cards -->
-        <div class="grid gap-8 md:grid-cols-3" id="explore">
+        <div class="grid gap-8 md:grid-cols-3">
           <!-- Card 1 -->
           <div
             class="bg-white shadow-md hover:shadow-lg rounded-xl p-8 transition"
@@ -181,7 +200,9 @@
               Access comprehensive collection of past exam papers across all
               subjects.
             </p>
-            <a href="/Previous/previous.html" class="text-indigo-700 font-medium hover:underline"
+            <a
+              href="/Previous/index.html"
+              class="text-indigo-700 font-medium hover:underline"
               >Learn More →</a
             >
           </div>
@@ -197,7 +218,9 @@
             <p class="text-gray-600 mb-4">
               Detailed notes curated by top students to help you excel.
             </p>
-            <a href="/Notes/notes.html" class="text-indigo-700 font-medium hover:underline"
+            <a
+              href="/Notes/index.html"
+              class="text-indigo-700 font-medium hover:underline"
               >Learn More →</a
             >
           </div>
@@ -213,7 +236,9 @@
             <p class="text-gray-600 mb-4">
               Share your notes and help fellow students succeed.
             </p>
-            <a href="/Upload/upload.html" class="text-indigo-700 font-medium hover:underline"
+            <a
+              href="/Upload/upload.html"
+              class="text-indigo-700 font-medium hover:underline"
               >Learn More →</a
             >
           </div>
@@ -236,6 +261,11 @@
         collaboration and access to the right content can help every learner
         achieve academic excellence.
       </p>
+      <a
+        href="/About/index.html"
+        class="text-indigo-700 font-medium hover:underline"
+        >See More →</a
+      >
     </section>
 
     <!-- Subjects Section -->
@@ -262,7 +292,8 @@
             <div class="text-5xl mb-4">⚛️</div>
             <h3 class="text-xl font-semibold text-indigo-900">Fundamentals</h3>
             <p class="text-gray-600 mt-2">
-              Essential topics from DBMS, OS, and Computer Network. build your basics strong.
+              Essential topics from DBMS, OS, and Computer Network. build your
+              basics strong.
             </p>
           </div>
           <div
@@ -328,9 +359,9 @@
         together.
       </p>
       <button
-        class="bg-white text-purple-700 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition"
+        class="bg-white text-purple-700 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition mb-3"
       >
-        <a href="./Previous/previous.html" class="hover:text-indigo-600 transition"
+        <a href="./Previous/index.html" class="hover:text-indigo-600 transition"
           >Previous Year Questions →</a
         >
       </button>
@@ -338,14 +369,14 @@
       <button
         class="bg-white text-purple-700 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition"
       >
-        <a href="./Notes/notes.html" class="hover:text-indigo-600 transition"
+        <a href="./Notes/index.html" class="hover:text-indigo-600 transition"
           >Notes →</a
         >
       </button>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-10">
+    <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-6">
       <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-4 gap-12">
         <!-- About -->
         <div>
@@ -362,18 +393,20 @@
           <h3 class="text-white text-xl font-semibold mb-4">Quick Links</h3>
           <ul class="space-y-2 text-sm">
             <li>
-              <a href="index.html" class="hover:text-indigo-400 transition"
+              <a href="/index.html" class="hover:text-indigo-400 transition"
                 >Home</a
               >
             </li>
             <li>
-              <a href="#about" class="hover:text-indigo-400 transition"
+              <a
+                href="/About/index.html"
+                class="hover:text-indigo-400 transition"
                 >About</a
               >
             </li>
             <li>
               <a
-                href="./Notes/notes.html"
+                href="/Notes/index.html"
                 class="hover:text-indigo-400 transition"
                 >Notes</a
               >
@@ -387,21 +420,21 @@
           <ul class="space-y-2 text-sm">
             <li>
               <a
-                href="./Previous/previous.html"
+                href="/Previous/index.html"
                 class="hover:text-indigo-400 transition"
                 >Previous Year Papers</a
               >
             </li>
             <li>
               <a
-                href="./Notes/notes.html"
+                href="/Notes/index.html"
                 class="hover:text-indigo-400 transition"
                 >Study Notes</a
               >
             </li>
             <li>
               <a
-                href="./Upload/upload.html"
+                href="/Upload/upload.html"
                 class="hover:text-indigo-400 transition"
                 >Upload Notes</a
               >
@@ -412,13 +445,13 @@
         <!-- Contact -->
         <div>
           <h3 class="text-white text-xl font-semibold mb-4">Contact Us</h3>
-          <p class="text-gray-400 text-sm mb-2">📧 support@ExamFuel.com</p>
+          <p class="text-gray-400 text-sm mb-2">📧 examfuel@gmail.com</p>
           <p class="text-gray-400 text-sm mb-4">📍 Giridh, Jharkhand</p>
         </div>
       </div>
 
       <div
-        class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500"
+        class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500 px-5"
       >
         © 2025 ExamFuel. All rights reserved. | Built with ❤️ by Niraj & Sagar
       </div>

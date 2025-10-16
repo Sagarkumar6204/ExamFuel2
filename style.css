@@ -13,19 +13,11 @@ html {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
 }
-.hero1 {
-  height: 80px;
-  width: 100%;
-  background-color: white;
-}
+
+
+
 #typingText
 {
   color: rgb(238, 199, 71);
   text-shadow: 0capx 0px 5px rgba(255, 255, 255, 0.7);
 }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-

@@ -3,56 +3,81 @@
     "subjectName": "DSA",
     "dateOfUpload": "2025-03-10",
     "fileLink": "https://drive.google.com/file/d/1U3iPwO6ybEbVNpvkaIx1sKDYvE-o_Glr/view?usp=drive_link",
-    "uploadedBy": "Niraj Kumar Verma"
+    "uploadedBy": "Niraj Kumar Verma",
+    "branch": "BCA",
+    "college": "SIT",
+    "session": "2023-24"
   },
   {
     "subjectName": "DBMS",
     "dateOfUpload": "2025-03-12",
     "fileLink": "https://drive.google.com/file/d/13-XEV5S44vb8YhnU2z-IFJ382dydLx1H/view?usp=drive_link",
-    "uploadedBy": "Sagar Kumar"
+    "uploadedBy": "Sagar Kumar",
+    "branch": "BCA",
+    "college": "JUT",
+    "session": "2023-24"
   },
   {
     "subjectName": "Operating Systems",
     "dateOfUpload": "2025-03-15",
     "fileLink": "https://drive.google.com/file/d/2h3g4f5d6e7j8k9l0/view",
-    "uploadedBy": "Aditya Sharma"
+    "uploadedBy": "Aditya Sharma",
+    "branch": "BCA",
+    "college": "JUT",
+    "session": "2023-24"
   },
- 
   {
     "subjectName": "English Communication",
     "dateOfUpload": "2025-04-05",
     "fileLink": "https://drive.google.com/file/d/1AzcfgGfFSXV_WawOni3y6GVEa1i-AeMY/view?usp=drive_link",
-    "uploadedBy": "Rahul Verma"
+    "uploadedBy": "Rahul Verma",
+    "branch": "BCA",
+    "college": "JUT",
+    "session": "2023-24"
   },
   {
     "subjectName": "Environmental Science",
     "dateOfUpload": "2025-04-09",
-    "fileLink":"https://drive.google.com/file/d/1U3iPwO6ybEbVNpvkaIx1sKDYvE-o_Glr/view?usp=drive_link",
-    "uploadedBy": "Ananya Gupta"
+    "fileLink": "https://drive.google.com/file/d/1U3iPwO6ybEbVNpvkaIx1sKDYvE-o_Glr/view?usp=drive_link",
+    "uploadedBy": "Ananya Gupta",
+    "branch": "BCA",
+    "college": "SIT",
+    "session": "2023-24"
   },
   {
     "subjectName": "Data Structures",
     "dateOfUpload": "2025-05-01",
     "fileLink": "https://drive.google.com/file/d/8k7l6m5n4o3p2q1r0/view",
-    "uploadedBy": "Harsh Vandana Sharma"
+    "uploadedBy": "Harsh Vandana Sharma",
+    "branch": "BCA",
+    "college": "SIT or JUT",
+    "session": "2023-24"
   },
   {
     "subjectName": "Computer Networks",
     "dateOfUpload": "2025-05-10",
     "fileLink": "https://drive.google.com/file/d/1IWw6NosWk2yTfNXyWrYqVeqmNzep87HS/view?usp=drive_link",
-    "uploadedBy": "Niraj Sharma"
+    "uploadedBy": "Niraj Sharma",
+    "branch": "BCA",
+    "college": "SIT",
+    "session": "2023-24"
   },
   {
     "subjectName": "C-programming",
     "dateOfUpload": "2025-05-10",
     "fileLink": "https://drive.google.com/file/d/1-qq5EVFz3EIZC4P0vHbeaF0I-AvFXvxT/view?usp=drive_link",
-    "uploadedBy": "Sagar Kumar"
-  }
-  ,
+    "uploadedBy": "Sagar Kumar",
+    "branch": "BCA",
+    "college": "SIT",
+    "session": "2023-24"
+  },
   {
     "subjectName": "Maths-II",
     "dateOfUpload": "2025-05-10",
     "fileLink": "https://drive.google.com/file/d/1s7Ry52Cd49uxXrMZMCwrDfUtfjqLmGF-/view?usp=drive_link",
-    "uploadedBy": "Sagar Kumar"
+    "uploadedBy": "Sagar Kumar",
+    "branch": "BCA",
+    "college": "SIT",
+    "session": "2023-24"
   }
 ]

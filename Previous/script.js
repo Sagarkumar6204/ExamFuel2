@@ -1,12 +1,37 @@
-// Fetch data from JSON file and display dynamically
+// Navbar
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+const navbar = document.getElementById("navbar");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 60) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementById("papers-container");
+  const searchInput = document.getElementById("searchInput");
 
-  try {
-    const response = await fetch("data.json");
-    const data = await response.json();
+  let papersData = [];
 
-    data.forEach(item => {
+  // Function to display papers dynamically
+  const displayPapers = (data) => {
+    container.innerHTML = "";
+
+    if (data.length === 0) {
+      container.innerHTML =
+        "<p class='text-center text-gray-500 col-span-full'>No matching papers found.</p>";
+      return;
+    }
+
+    data.forEach((item) => {
       const card = document.createElement("div");
       card.className =
         "bg-white shadow-md hover:shadow-xl rounded-2xl p-6 transition duration-300 border border-gray-100";
@@ -20,6 +45,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
 
         <p class="text-sm text-gray-500 mb-1"><i class="ri-calendar-line mr-1"></i> Uploaded: ${item.dateOfUpload}</p>
+        <p class="text-sm text-gray-500 mb-1"><i class="ri-calendar-line mr-1"></i> Session: ${item.session}</p>
+        <p class="text-sm text-gray-500 mb-1"><i class="ri-book-line mr-1"></i> Branch: ${item.branch}</p>
+        <p class="text-sm text-gray-500 mb-1"><i class="ri-stack-line mr-1"></i> College / University: ${item.college}</p>
         <p class="text-sm text-gray-500 mb-4"><i class="ri-user-line mr-1"></i> Uploaded by: ${item.uploadedBy}</p>
 
         <a href="${item.fileLink}" target="_blank"
@@ -30,27 +58,29 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       container.appendChild(card);
     });
+  };
+
+  try {
+    const response = await fetch("data.json");
+    papersData = await response.json();
+    displayPapers(papersData);
+
+    // Enhanced Search Functionality
+    searchInput.addEventListener("input", (e) => {
+      const query = e.target.value.toLowerCase();
+      const filtered = papersData.filter(
+        (item) =>
+          item.subjectName.toLowerCase().includes(query) ||
+          item.college.toLowerCase().includes(query) ||
+          item.session.toLowerCase().includes(query) ||
+          item.branch.toLowerCase().includes(query) ||
+          item.uploadedBy.toLowerCase().includes(query)
+      );
+      displayPapers(filtered);
+    });
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error loading JSON:", error);
     container.innerHTML =
       "<p class='text-red-500 text-center col-span-full'>Failed to load data. Please check your JSON file.</p>";
   }
-});
-
-
-
-
-// Search functionality
-document.getElementById("searchInput").addEventListener("input", function (e) {
-  const searchTerm = e.target.value.toLowerCase();
-  const cards = document.querySelectorAll("#papers-container > div");
-
-  cards.forEach(card => {
-    const subject = card.querySelector("h3").textContent.toLowerCase();
-    if (subject.includes(searchTerm)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
 });
