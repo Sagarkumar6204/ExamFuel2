@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         <p class="text-sm text-gray-500 mb-1"><i class="ri-calendar-line mr-1"></i> Uploaded: ${item.dateOfUpload}</p>
         <p class="text-sm text-gray-500 mb-1"><i class="ri-calendar-line mr-1"></i> Session: ${item.session}</p>
-        <p class="text-sm text-gray-500 mb-1"><i class="ri-book-mark-line mr-1"></i> Branch: ${item.branch}</p>
+        <p class="text-sm text-gray-500 mb-1"><i class="ri-book-line mr-1"></i> Branch: ${item.branch}</p>
         <p class="text-sm text-gray-500 mb-1"><i class="ri-stack-line mr-1"></i> College / University: ${item.college}</p>
         <p class="text-sm text-gray-500 mb-4"><i class="ri-user-line mr-1"></i> Uploaded by: ${item.uploadedBy}</p>
 

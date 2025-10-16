@@ -1,92 +1,82 @@
 [
   {
-    "subjectName": "Mathematics Notes",
-    "uploadedBy": "Niraj Sharma",
+    "subjectName": "Internet Basics Notes",
+    "uploadedBy": "Sagar Kumar",
     "uploadDate": "2025-04-02",
-    "branch": "BCA",
-    "semester": "2nd",
-    "fileLink": "https://drive.google.com/file/d/1a2b3c4d5e6f7g8h9/view",
-    "description": "Complete notes on calculus, algebra, and geometry with solved examples and formulas."
+    "fileLink": "https://drive.google.com/file/d/15AWi9d8ZZQHm5VGx_WjMqiNDmlQSdB7V/view?usp=drive_link",
+    "description": "Complete notes on Internet, and its Key Concepts with solved examples.",
+    "branch": "BCA"
   },
   {
-    "subjectName": "Web Development Notes",
-    "uploadedBy": "Riya Kumari",
-    "uploadDate": "2025-03-22",
-    "branch": "BCA",
-    "semester": "5th",
-    "fileLink": "https://drive.google.com/file/d/2b3c4d5e6f7g8h9i0/view",
-    "description": "Detailed HTML, CSS, and JavaScript notes with responsive design and mini projects."
-  },
-  {
-    "subjectName": "Python Programming Notes",
-    "uploadedBy": "Amit Yadav",
-    "uploadDate": "2025-02-11",
-    "branch": "BCA",
-    "semester": "3rd",
-    "fileLink": "https://drive.google.com/file/d/3c4d5e6f7g8h9i0j1/view",
-    "description": "Complete Python basics to OOPs concepts with examples and exercises."
-  },
-  {
-    "subjectName": "C Programming Notes",
-    "uploadedBy": "Rohan Gupta",
-    "uploadDate": "2025-01-19",
-    "branch": "BCA",
-    "semester": "1st",
-    "fileLink": "https://drive.google.com/file/d/4d5e6f7g8h9i0j1k2/view",
-    "description": "C fundamentals, loops, functions, arrays, pointers, and file handling explained simply."
-  },
-  {
-    "subjectName": "Database Management System Notes",
-    "uploadedBy": "Priya Singh",
-    "uploadDate": "2025-03-08",
-    "branch": "BCA",
-    "semester": "3rd",
-    "fileLink": "https://drive.google.com/file/d/5e6f7g8h9i0j1k2l3/view",
-    "description": "Covers ER diagrams, normalization, SQL queries, and relational models in detail."
-  },
-  {
-    "subjectName": "Operating System Notes",
-    "uploadedBy": "Aman Raj",
-    "uploadDate": "2025-02-05",
-    "branch": "BCA",
-    "semester": "3rd",
-    "fileLink": "https://drive.google.com/file/d/6f7g8h9i0j1k2l3m4/view",
-    "description": "Processes, threads, scheduling algorithms, memory management, and file systems covered."
-  },
-  {
-    "subjectName": "Java Programming Notes",
+    "subjectName": "Java Collection Framework Notes",
     "uploadedBy": "Niraj Kumar Verma",
-    "uploadDate": "2025-04-10",
-    "branch": "BCA",
-    "semester": "4th",
-    "fileLink": "https://drive.google.com/file/d/7g8h9i0j1k2l3m4n5/view",
-    "description": "Core Java concepts including OOPs, inheritance, polymorphism, and exception handling."
+    "uploadDate": "2025-04-05",
+    "fileLink": "https://drive.google.com/file/d/1cy2tHv_cUxxR-fcNi0wsavfVslpY1Zww/view?usp=drive_link",
+    "description": "All important frameworks including some advanced Concept.",
+    "branch": "BCA"
+  },
+  {
+    "subjectName": "Comparators in Java Notes",
+    "uploadedBy": "Sagar Kumar",
+    "uploadDate": "2025-04-09",
+    "fileLink": "https://drive.google.com/file/d/13r95Bxr1XOEaBHe89nyu8mEgL5hJ78B7/view?usp=drive_link",
+    "description": "Covers OSI model, TCP/IP, and network protocols.",
+    "branch": "BCA"
+  },
+  {
+    "subjectName": "HTML Form Notes",
+    "uploadedBy": "Sagar Kumar",
+    "uploadDate": "2025-04-15",
+    "fileLink": "https://drive.google.com/file/d/1s5MU_Ch_rVfW-cpZa4YHG5TncEHeTvU2/view?usp=drive_link",
+    "description": "Covers C programming, data structures, and algorithm basics.",
+    "branch": "BCA"
+  },
+  {
+    "subjectName": "Java OOPS Concepts Notes",
+    "uploadedBy": "Niraj Kumar Verma",
+    "uploadDate": "2025-04-20",
+    "fileLink": "https://drive.google.com/file/d/1TL5JecQHAOerQnt6OU43vbv_013eApeu/view?usp=drive_link",
+    "description": "Grammar, vocabulary, and essay writing notes for communication skills.",
+    "branch": "BCA"
+  },
+  {
+    "subjectName": "Gate Operating Systems Notes",
+    "uploadedBy": "Sagar Kumar",
+    "uploadDate": "2025-05-01",
+    "fileLink": "https://drive.google.com/file/d/1mpadzUqGENHzluUioDI5QHhR_6egM7SU/view?usp=drive_link",
+    "description": "Covers processes, threads, scheduling, and memory management concepts.",
+    "branch": "BCA"
+  },
+  {
+    "subjectName": "JavaScript Basics Notes",
+    "uploadedBy": "Sagar Kumar",
+    "uploadDate": "2025-05-01",
+    "fileLink": "https://drive.google.com/file/d/1tEoFqfbMSf5pbKXWK1lxv8jRfiMRl8xn/view?usp=drive_link",
+    "description": "Covers processes, threads, scheduling, and memory management concepts.",
+    "branch": "BCA"
+  },
+  {
+    "subjectName": "DSA Complexity CheatSheet Notes",
+    "uploadedBy": "Niraj Kumar Verma",
+    "uploadDate": "2025-05-01",
+    "fileLink": "https://drive.google.com/file/d/1EYMWRayQWZR0SVs2fH9DY60eWO_B9nBf/view?usp=drive_link",
+    "description": "Covers processes, threads, scheduling, and memory management concepts.",
+    "branch": "BCA"
   },
   {
     "subjectName": "Computer Networks Notes",
-    "uploadedBy": "Ritika Sharma",
-    "uploadDate": "2025-03-28",
-    "branch": "BCA",
-    "semester": "4th",
-    "fileLink": "https://drive.google.com/file/d/8h9i0j1k2l3m4n5o6/view",
-    "description": "OSI model, TCP/IP, protocols, and data communication concepts clearly explained."
+    "uploadedBy": "Sagar Kumar",
+    "uploadDate": "2025-05-05",
+    "fileLink": "https://drive.google.com/file/d/182-S5Dak5O2oOHYp8Wq7wmw6pqBnhLQp/view?usp=drive_link",
+    "description": "Covers processes, threads, scheduling, and memory management concepts.",
+    "branch": "BCA"
   },
   {
-    "subjectName": "Artificial Intelligence Notes",
-    "uploadedBy": "Harshita Mishra",
-    "uploadDate": "2025-05-16",
-    "branch": "BCA",
-    "semester": "6th",
-    "fileLink": "https://drive.google.com/file/d/9i0j1k2l3m4n5o6p7/view",
-    "description": "Machine learning basics, neural networks, and AI problem-solving strategies explained simply."
-  },
-  {
-    "subjectName": "Cloud Computing Notes",
-    "uploadedBy": "Sakshi Mehta",
-    "uploadDate": "2025-06-04",
-    "branch": "BCA",
-    "semester": "6th",
-    "fileLink": "https://drive.google.com/file/d/0j1k2l3m4n5o6p7q8/view",
-    "description": "Explains virtualization, IaaS, PaaS, SaaS, and major cloud service providers in detail."
+    "subjectName": "MAths Statistics Notes",
+    "uploadedBy": "Sagar Kumar",
+    "uploadDate": "2025-05-10",
+    "fileLink": "https://drive.google.com/file/d/1j8Cv8vjpF30C3ErMRFikUtt1etyPkT9d/view?usp=drive_link",
+    "description": "Covers processes, threads, scheduling, and memory management concepts.",
+    "branch": "BCA"
   }
 ]

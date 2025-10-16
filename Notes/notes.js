@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         <p class="text-sm text-gray-500 mb-1"><i class="ri-calendar-line mr-1"></i> Uploaded: ${
           note.uploadDate
         }</p>
-        <p class="text-sm text-gray-500 mb-1"><i class="ri-book-mark-line mr-1"></i> Branch: ${
+        <p class="text-sm text-gray-500 mb-1"><i class="ri-book-line mr-1"></i> Branch: ${
           note.branch
         }</p>
         <p class="text-sm text-gray-500 mb-4"><i class="ri-user-line mr-1"></i> Uploaded by: ${
