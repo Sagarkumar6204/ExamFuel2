@@ -29,6 +29,90 @@ toggleLoginType.addEventListener("click", () => {
   }
 });
 
+// document.getElementById("loginForm").addEventListener("submit", async (e) => {
+//   e.preventDefault();
+
+//   const usingPhone = phoneInput.style.display === "block";
+//   const identifier = usingPhone ? phoneInput.value.trim() : emailInput.value.trim();
+//   const password = document.getElementById("password").value;
+
+//   console.log('Sending login:', { identifier, password: password ? '***' : '' });
+
+//   if (!identifier || !password) {
+//     alert("❌ Please fill all fields!");
+//     return;
+//   }
+
+//   try {
+//     const res = await fetch('http://localhost:3000/login', { // relative path chalega because server serves static files
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({ identifier, password })
+//     });
+
+    
+//     const text = await res.text();
+//     // try parse JSON
+//     let data;
+//     try {
+//       data = JSON.parse(text);
+//     } catch (parseErr) {
+//       console.error('❌ Server returned non-JSON:', text);
+//       alert('❌ Server did not return valid JSON. See console.');
+//       return;
+//     }
+
+//     console.log('Server response:', res.status, data);
+//     alert(data.message);
+
+//     if (res.ok) {
+//       window.location.href = '/index.html'; 
+//     }
+//   } catch (err) {
+//     console.error('❌ Login error (fetch):', err);
+//     alert('❌ Something went wrong! Make sure server is running and you opened the app via http://localhost:3000');
+//   }
+// });
+// //////
+
+
+// document.getElementById('loginForm').addEventListener('submit', async (e) => {
+//   e.preventDefault();
+
+//   const identifier = document.getElementById('identifier').value;
+//   const password = document.getElementById('password').value;
+
+//   try {
+//     const res = await fetch('http://localhost:5000/api/login', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({ identifier, password })
+//     });
+
+//     const data = await res.json();
+
+//     if (res.ok) {
+//       // Save user info locally (optional)
+//       localStorage.setItem('user', JSON.stringify(data));
+
+//       // Show profile card
+//       document.getElementById('profile').classList.remove('hidden');
+//       document.getElementById('userName').textContent = data.name;
+//       document.getElementById('userEmail').textContent = data.email;
+//       document.getElementById('userPhone').textContent = data.phone;
+//     } else {
+//       alert(data.message);
+//     }
+//   } catch (err) {
+//     console.error(err);
+//     alert('Server error');
+//   }
+// });
+
+
+
+
+
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -36,40 +120,31 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   const identifier = usingPhone ? phoneInput.value.trim() : emailInput.value.trim();
   const password = document.getElementById("password").value;
 
-  console.log('Sending login:', { identifier, password: password ? '***' : '' });
-
   if (!identifier || !password) {
     alert("❌ Please fill all fields!");
     return;
   }
 
   try {
-    const res = await fetch('http://localhost:3000/login', { // relative path chalega because server serves static files
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ identifier, password })
+    const res = await fetch("http://localhost:3000/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ identifier, password }),
     });
 
-    
-    const text = await res.text();
-    // try parse JSON
-    let data;
-    try {
-      data = JSON.parse(text);
-    } catch (parseErr) {
-      console.error('❌ Server returned non-JSON:', text);
-      alert('❌ Server did not return valid JSON. See console.');
-      return;
-    }
-
-    console.log('Server response:', res.status, data);
-    alert(data.message);
+    const data = await res.json();
 
     if (res.ok) {
-      window.location.href = '/index.html'; 
+      // Save full user info
+      localStorage.setItem("userData", JSON.stringify(data));
+
+      // Redirect to homepage
+      window.location.href = "/index.html";
+    } else {
+      alert(data.message);
     }
   } catch (err) {
-    console.error('❌ Login error (fetch):', err);
-    alert('❌ Something went wrong! Make sure server is running and you opened the app via http://localhost:3000');
+    console.error(err);
+    alert("❌ Server error");
   }
 });

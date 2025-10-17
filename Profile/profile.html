@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamFuel | Profile Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="profile.css">
+  </head>
+
+  <body class="text-gray-900">
+    <!-- Header -->
+    <header
+      class="w-full bg-gradient-to-r from-purple-700 to-indigo-700 text-white py-4 px-6 flex justify-between items-center shadow-md"
+    >
+      <div class="flex items-center space-x-2">
+        <div
+          class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full"
+        >
+          <i class="ri-graduation-cap-line text-yellow-300 text-xl"></i>
+        </div>
+        <h1 class="text-2xl font-bold">
+          Exam<span class="text-yellow-400">Fuel</span>
+        </h1>
+      </div>
+      <a
+        href="/index.html"
+        class="text-sm hover:text-yellow-300 transition duration-200 font-medium"
+        >← Back to Home</a
+      >
+    </header>
+
+    <!-- Profile Section -->
+    <section class="max-w-6xl mx-auto mt-12 mb-12 fade-in px-4 md:px-0">
+      <!-- Profile Card -->
+      <div class="card mb-8">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-6 border-b pb-8"
+        >
+          <div class="flex items-center space-x-6">
+            <!-- Profile Image -->
+            <div
+              class="relative w-28 h-28 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-4xl font-bold"
+              id="profileInitials"
+            >
+              NK
+              <label
+                for="photoUpload"
+                class="absolute bottom-1 right-1 bg-indigo-600 p-2 rounded-full cursor-pointer hover:bg-indigo-700 transition"
+              >
+                <i class="ri-camera-line text-white text-lg"></i>
+              </label>
+              <input
+                type="file"
+                id="photoUpload"
+                class="hidden"
+                accept="image/*"
+              />
+            </div>
+
+            <!-- Profile Info -->
+            <div>
+              <h2 class="text-3xl font-bold text-gray-800" id="fullName">
+               
+              </h2>
+              <p class="text-gray-500 text-sm">@ExamFuel</p>
+              <div class="flex items-center space-x-4 mt-2 text-gray-600">
+  <span><i class="ri-mail-line mr-1"></i> <span id="userEmail"></span></span>
+  <span><i class="ri-phone-line mr-1"></i> <span id="userPhone"></span></span>
+</div>
+
+            </div>
+          </div>
+
+          <button
+            id="editProfileBtn"
+            class="mt-6 md:mt-0 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-lg font-medium flex items-center space-x-2 shadow-md transition"
+          >
+            <i class="ri-edit-line"></i>
+            <span>Edit Profile</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Coins + Contributions in one row -->
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <!-- Coins Section -->
+        <div class="card">
+          <div class="flex justify-between items-center mb-5">
+            <h3 class="font-bold text-lg text-gray-800">ExamFuel Coins</h3>
+            <i
+              class="ri-award-fill text-yellow-500 text-2xl bg-yellow-100 p-2 rounded-full"
+            ></i>
+          </div>
+
+          <div class="w-full bg-gray-200 rounded-full h-5 mb-2 overflow-hidden">
+            <div
+              id="coinBar"
+              class="h-5 rounded-full gold-bar transition-all duration-700"
+              style="width: 70%"
+            ></div>
+          </div>
+          <p class="text-sm text-gray-500">Total Coins Earned</p>
+
+          <hr class="my-5 border-gray-200" />
+          <p class="text-sm text-gray-700 font-medium mb-2">
+            Earn more by contributing:
+          </p>
+          <ul class="text-sm space-y-1 text-gray-700">
+            <li>
+              Upload Notes —
+              <span class="text-orange-500 font-semibold">+50 coins</span>
+            </li>
+            <li>
+              Upload Papers —
+              <span class="text-orange-500 font-semibold">+100 coins</span>
+            </li>
+          </ul>
+          <div class="mt-6">
+    <a href="reedem.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg font-medium transition">
+      Redeem Coins
+    </a>
+  </div>
+        </div>
+
+        <!-- Contributions Section -->
+        <div class="card">
+          <div class="flex justify-between items-center mb-5">
+            <h3 class="font-bold text-lg text-gray-800">Contributions</h3>
+            <i
+              class="ri-file-list-line text-purple-600 text-2xl bg-purple-100 p-2 rounded-full"
+            ></i>
+          </div>
+
+          <div
+            class="bg-purple-50 p-5 rounded-xl flex justify-between items-center mb-4 hover:bg-purple-100 transition"
+          >
+            <div>
+              <p class="font-medium text-gray-800">Previous Year Papers</p>
+              <p class="text-xs text-gray-500">Shared with community</p>
+            </div>
+            <span class="font-bold text-purple-700 text-lg">8</span>
+          </div>
+
+          <div
+            class="bg-indigo-50 p-5 rounded-xl flex justify-between items-center hover:bg-indigo-100 transition"
+          >
+            <div>
+              <p class="font-medium text-gray-800">Study Notes</p>
+              <p class="text-xs text-gray-500">Helped students learn</p>
+            </div>
+            <span class="font-bold text-indigo-700 text-lg">15</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terms and Logout Section -->
+      <div class="card flex flex-col md:flex-row items-center gap-6">
+        <button
+          id="termsBtn"
+          class="w-full md:w-1/2 bg-white flex justify-center items-center gap-2 py-3 rounded-lg shadow-md hover:bg-gray-50 transition text-gray-800 font-medium border border-gray-200"
+        >
+          <i class="ri-file-text-line text-lg"></i> Terms & Conditions
+        </button>
+
+        <button
+          id="logoutBtn"
+          class="w-full md:w-1/2 bg-red-600 hover:bg-red-700 text-white flex justify-center items-center gap-2 py-3 rounded-lg shadow-md font-medium transition"
+        >
+          <i class="ri-logout-box-r-line text-lg"></i> Logout
+        </button>
+      </div>
+    </section>
+
+    <!-- Edit Profile Modal -->
+    <div
+      id="editModal"
+      class="hidden fixed inset-0 bg-black/60 flex justify-center items-center z-50"
+    >
+      <div class="bg-white rounded-2xl max-w-md w-full p-8 text-gray-800">
+        <h3 class="text-2xl font-bold mb-4 text-indigo-700">Edit Profile</h3>
+        <label class="block text-sm font-medium text-gray-700 mb-1"
+          >Full Name</label
+        >
+        <input
+          type="text"
+          id="nameInput"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-5 focus:ring-2 focus:ring-indigo-500 outline-none"
+          placeholder="Enter your name"
+        />
+        <div class="flex justify-end space-x-3">
+          <button
+            id="cancelEdit"
+            class="px-5 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-100 transition"
+          >
+            Cancel
+          </button>
+          <button
+            id="saveEdit"
+            class="px-5 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div
+      id="termsModal"
+      class="hidden fixed inset-0 bg-black/60 flex justify-center items-center z-50"
+    >
+      <div class="bg-white rounded-2xl max-w-lg w-full p-8 text-gray-800">
+        <h3 class="text-2xl font-bold mb-3 text-purple-700">
+          Terms & Conditions
+        </h3>
+        <p class="text-sm leading-relaxed mb-4">
+          By using <strong>ExamFuel</strong>, you agree to upload only authentic
+          materials. Coins are earned by contributing notes or question papers.
+          Misuse, spam, or plagiarism can lead to account restrictions.
+          Collaboration and honesty are at the heart of ExamFuel’s community.
+        </p>
+        <button
+          id="closeTerms"
+          class="mt-2 bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="profile.js">
+      
+    </script>
+  </body>
+</html>

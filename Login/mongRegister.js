@@ -69,6 +69,38 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ message: '❌ Server error' });
   }
 });
+// Simple login route
+app.post('/api/login', async (req, res) => {
+  const { identifier, password } = req.body; // 'identifier' can be email or phone
+
+  try {
+    // Check if identifier is email or phone
+    let query = {};
+    if (identifier.includes('@')) {
+      query.email = identifier;
+    } else {
+      query.phone = identifier;
+    }
+
+    query.password = password; // simple plain text password check
+
+    const user = await User.findOne(query);
+
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+
+    // Send user info (exclude password)
+    res.json({
+      name: user.name,
+      email: user.email,
+      phone: user.phone
+    });
+  } catch (err) {
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 
 
 app.use((req, res) => {

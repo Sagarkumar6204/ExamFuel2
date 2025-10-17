@@ -28,12 +28,12 @@
           >Home</a
         >
         <a
-          href="/Previous/index.html"
+          href="/Previous/index.html" id="protected-link"
           class="py-2 hover:text-indigo-600 transition"
           >Previous Year Paper</a
         >
         <a
-          href="/Notes/index.html"
+          href="/Notes/index.html" id="protected-link"
           class="py-2 hover:text-indigo-600 transition"
           >Notes</a
         >
@@ -43,17 +43,19 @@
           >About Us</a
         >
         <a
-          href="/Upload/upload.html"
+          href="/Upload/upload.html" id="protected-link"
           class="bg-indigo-700 text-white px-5 py-2 rounded-lg hover:bg-indigo-800"
           >Upload</a
         >
 
-        <a
-          href="#"
-          class="bg-red-700 px-5 py-2 rounded-full hover:bg-red-800 text-white"
-        >
-          <i class="ri-logout-box-r-line text-white"></i>
-        </a>
+       <!-- <a
+  href="/Profile/profile.html"
+  class="bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-full text-white flex items-center justify-center hover:scale-105 transition transform duration-200 shadow-md"
+  title="Profile"
+>
+  <i class="ri-user-line text-xl"></i>
+</a> --><div id="navProfileContainer"  style="margin-top: 8px;"></div>
+
       </div>
 
       <!-- Mobile Menu Button -->
@@ -69,28 +71,31 @@
         >Home</a
       >
       <a
-        href="/Previous/index.html"
+        href="/Previous/index.html" id="protected-link"
         class="py-2 hover:text-indigo-600 transition"
         >Previous Year Paper</a
       >
-      <a href="/Notes/index.html" class="py-2 hover:text-indigo-600 transition"
+      <a href="/Notes/index.html" class="py-2 hover:text-indigo-600 transition" id="protected-link"
         >Notes</a
       >
       <a href="/About/index.html" class="py-2 hover:text-indigo-600 transition"
         >About Us</a
       >
       <a
-        href="/Upload/upload.html"
+        href="/Upload/upload.html" id="protected-link"
         class="bg-indigo-700 text-white px-5 py-2 rounded-lg hover:bg-indigo-800 w-fit"
         >Upload</a
       >
+<!-- <a
+  href="/Profile/profile.html"
+  class="bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-full text-white flex items-center justify-center hover:scale-105 transition transform duration-200 shadow-md"
+  title="Profile"
+>
+  <i class="ri-user-line text-xl"></i>
+</a> -->
 
-      <a
-        href="#"
-        class="bg-red-700 px-5 py-2 rounded-full hover:bg-red-800 text-white w-fit"
-      >
-        <i class="ri-logout-box-r-line text-white"></i>
-      </a>
+<div id="navProfileContainer"  style="margin-top: 8px;"></div>
+
     </div>
 
     <div class="h-20 w-full bg-gray-50"></div>
@@ -189,7 +194,7 @@
             class="bg-white rounded-2xl shadow-xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
           >
             <img
-              src="#"
+              src="niraj.png"
               alt="Frontend Developer"
               class="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-blue-500"
             />
@@ -201,13 +206,23 @@
               Passionate about crafting beautiful, responsive, and user-friendly
               web experiences using modern technologies.
             </p>
+<!-- LinkedIn Icon -->
+  <a
+    href="https://www.linkedin.com/in/niraj-vermaa/" 
+    target="_blank" 
+    class="text-blue-700 hover:text-blue-800 text-2xl"
+    title="LinkedIn Profile"
+  >
+    <i class="ri-linkedin-box-fill"></i>
+  </a>
+
           </div>
 
           <div
             class="bg-white rounded-2xl shadow-xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
           >
             <img
-              src="#"
+              src="sagarss.jpg"
               alt="Backend Developer"
               class="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-blue-500"
             />
@@ -217,6 +232,15 @@
               Focused on building secure, scalable, and high-performance systems
               to power smooth user experiences.
             </p>
+            <!-- LinkedIn Icon -->
+  <a
+    href="https://www.linkedin.com/in/contactsagar-kumar/" 
+    target="_blank" 
+    class="text-blue-700 hover:text-blue-800 text-2xl"
+    title="LinkedIn Profile"
+  >
+    <i class="ri-linkedin-box-fill"></i>
+  </a>
           </div>
         </div>
       </div>
@@ -253,7 +277,7 @@
             </li>
             <li>
               <a
-                href="/Notes/index.html"
+                href="/Notes/index.html" id="protected-link"
                 class="hover:text-indigo-400 transition"
                 >Notes</a
               >
@@ -267,21 +291,21 @@
           <ul class="space-y-2 text-sm">
             <li>
               <a
-                href="/Previous/index.html"
+                href="/Previous/index.html" id="protected-link"
                 class="hover:text-indigo-400 transition"
                 >Previous Year Papers</a
               >
             </li>
             <li>
               <a
-                href="/Notes/index.html"
+                href="/Notes/index.html" id="protected-link"
                 class="hover:text-indigo-400 transition"
                 >Study Notes</a
               >
             </li>
             <li>
               <a
-                href="/Upload/upload.html"
+                href="/Upload/upload.html" id="protected-link"
                 class="hover:text-indigo-400 transition"
                 >Upload Notes</a
               >
@@ -303,6 +327,15 @@
         © 2025 ExamFuel. All rights reserved. | Built with ❤️ by Niraj & Sagar
       </div>
     </footer>
+
+<!-- Login Overlay --><div id="loginModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white p-8 rounded-xl text-center">
+    <h2 class="text-xl font-bold mb-4">🚨 Login Required</h2>
+    <p class="mb-6">You must login first to access this feature.</p>
+    <a href="/Login/login.html" class="bg-indigo-600 text-white px-4 py-2 rounded-lg">Login Now</a>
+    <button id="closeLoginModal" class="ml-4 bg-gray-200 px-4 py-2 rounded-lg">Cancel</button>
+  </div>
+</div>
 
     <script src="script.js"></script>
   </body>
