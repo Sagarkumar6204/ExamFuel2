@@ -163,7 +163,9 @@ async function sendMessage(message) {
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
   try {
-    const resp = await fetch("http://localhost:5000/chat", {
+//add render link
+
+    const resp = await fetch(`${CONFIG.CHAT_URL}/chat`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ message }),
