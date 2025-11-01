@@ -10,6 +10,9 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.static(path.join(__dirname, "../Frontend/public")));
+
+
 
 mongoose.connect('mongodb://localhost:27017/Register', {
   useNewUrlParser: true,
@@ -25,6 +28,21 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
 });
 const User = mongoose.model('User', userSchema);
+
+
+// Serve frontend static files
+
+
+app.use(express.static(path.join(__dirname, "../Frontend")));
+
+
+
+// Catch-all route for SPA (optional, useful if using JS routing)
+
+
+// app.use((req, res) => {
+//   res.sendFile(path.join(__dirname, "../Frontend/index.html"));
+// });
 
 
 app.post('/register', async (req, res) => {
