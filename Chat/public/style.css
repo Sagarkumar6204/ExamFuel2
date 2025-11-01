@@ -1,30 +1,16 @@
-/* Navbar */
-
-html {
-  scroll-behavior: smooth;
-}
-.navbar {
-  transition: all 0.4s ease;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-.scrolled {
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15px);
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-
-
-#typingText
-{
-  color: rgb(238, 199, 71);
-  text-shadow: 0capx 0px 5px rgba(255, 255, 255, 0.7);
+body {
+  background-color: #f5f7fa;
+  height: 100vh;
 }
 
-
-
-/* Chat Bot */
 /* Floating Chat Button */
 .chat-toggle {
   position: fixed;
@@ -53,7 +39,7 @@ html {
   right: 25px;
   width: 340px;
   max-height: 500px;
- 
+  background: #fff;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   display: none;
@@ -143,7 +129,6 @@ html {
   border: none;
   border-radius: 10px;
   background-color: #f1f3f9;
-  color: black;
   outline: none;
 }
 
