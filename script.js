@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
-  }
+  } 
 });
 
 const text = "Learn To Become Top 1%";
@@ -72,15 +72,18 @@ function showLoginRequiredModal() {
     modal.classList.add('hidden');
   });
 }
-const protectedLinks = document.querySelectorAll('.protected-link');
-protectedLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    if (!user) {
-      e.preventDefault();
-      showLoginRequiredModal();
-    }
-  });
-});
+// const protectedLinks = document.querySelectorAll('.protected-link');
+// protectedLinks.forEach(link => {
+//   link.addEventListener('click', (e) => {
+//     if (!user) {
+//       e.preventDefault();
+//       showLoginRequiredModal();
+//     }
+//   });
+// });
+
+
+
 // Function to check if user is logged in
 function isLoggedIn() {
   return localStorage.getItem('userData') !== null;
@@ -160,11 +163,11 @@ async function sendMessage(message) {
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
   try {
-    const resp = await fetch("/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message }),
-    });
+    const resp = await fetch("http://localhost:5000/chat", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ message }),
+});
 
     const data = await resp.json();
     // remove loading

@@ -40,7 +40,7 @@ async function sendMessage(message) {
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
   try {
-    const resp = await fetch("/chat", {
+    const resp = await fetch("http://localhost:5000/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message }),
