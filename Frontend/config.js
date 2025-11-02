@@ -1,4 +1,4 @@
 const CONFIG = {
-  BACKEND_URL: "https://examfuel-backend.onrender.com",
-  CHAT_URL: "https://examfuel-chat-backend.onrender.com"
+  BACKEND_URL: "https://examfuel-home-back.onrender.com",
+  CHAT_URL: "https://examfuel-ai-help.onrender.com"
 };
