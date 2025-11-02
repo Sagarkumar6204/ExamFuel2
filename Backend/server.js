@@ -10,7 +10,7 @@ require('dotenv').config();
 app.use(express.json());
 const allowedOrigins = [
   'https://examfuel-home-backs.onrender.com',
-  'https://examfuel-frontend.onrender.com',
+  'https://examfuel-front-stat.onrender.com',
   'http://localhost:3000'
 ];
 
