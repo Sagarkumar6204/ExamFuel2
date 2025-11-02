@@ -85,7 +85,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-
 // Chat Bot
 
 // --- Element references ---

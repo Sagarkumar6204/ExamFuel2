@@ -98,7 +98,7 @@ function renderNavbarProfile() {
     const profileLink = document.createElement("a");
     profileLink.href = "/Profile/profile.html";
     profileLink.className =
-      "bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-full text-white flex items-center justify-center hover:scale-105 transition transform duration-200 shadow-md";
+      "bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-1 rounded-full text-white flex items-center justify-center hover:scale-105 transition transform duration-200 shadow-md";
     profileLink.title = "Profile";
     profileLink.innerHTML = '<i class="ri-user-line text-xl"></i>';
     navProfileContainer.appendChild(profileLink);
