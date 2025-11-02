@@ -9,8 +9,9 @@ const app = express();
 require('dotenv').config();
 app.use(express.json());
 const allowedOrigins = [
-  'https://examfuel-home-backs.onrender.com', // your frontend render URL
-  'http://localhost:3000'                    // local testing
+  'https://examfuel-home-backs.onrender.com',
+  'https://examfuel-frontend.onrender.com',
+  'http://localhost:3000'
 ];
 
 app.use(cors({
