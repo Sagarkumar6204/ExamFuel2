@@ -1,4 +1,4 @@
 const CONFIG = {
-  BACKEND_URL: "http://localhost:3000",
-  CHAT_URL: "http://localhost:5000"
+  BACKEND_URL: "https://examfuel-backend.onrender.com",
+  CHAT_URL: "https://examfuel-chat-backend.onrender.com"
 };
