@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, "../Frontend/public")));
 
 
 
-mongoose.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Register', {
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/Register', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
