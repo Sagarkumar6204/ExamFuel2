@@ -1,11 +1,29 @@
+
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 
 const app = express();
-app.use(cors({ origin: '*' }));
+require('dotenv').config();
 app.use(express.json());
+const allowedOrigins = [
+  'https://examfuel-home-back.onrender.com', // your frontend render URL
+  'http://localhost:3000'                    // local testing
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -14,7 +32,7 @@ app.use(express.static(path.join(__dirname, "../Frontend/public")));
 
 
 
-mongoose.connect('mongodb://localhost:27017/Register', {
+mongoose.connect(process.env.MONGO_URI||'mongodb://localhost:27017/Register', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -126,5 +144,5 @@ app.use((req, res) => {
 });
 
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
