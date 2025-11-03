@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamFuel | Earn Coins</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+  body {
+    background-color: #f6f7fb;
+    font-family: 'Inter', sans-serif;
+  }
+  .nav-btn {
+    @apply px-5 py-2 rounded-full font-semibold text-gray-700 bg-white shadow hover:text-indigo-600 transition;
+  }
+  .earn-card {
+    @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-1;
+  }
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- Navbar -->
+<nav class="bg-[#1e1e2f] text-white px-8 py-4 flex justify-between items-center shadow-md">
+  <div class="text-2xl font-bold text-yellow-400 flex items-center space-x-2">
+    <i class="ri-fire-line text-3xl"></i>
+    <span>ExamFuel</span>
+  </div>
+  <div class="flex space-x-4">
+    <a href="redeem.html" class="nav-btn"><i class="ri-gift-line mr-2"></i>Redeem</a>
+    <a href="earn-coins.html" class="nav-btn bg-yellow-400 text-white"><i class="ri-coin-fill mr-2"></i>Earn Coins</a>
+    <button class="nav-btn"><i class="ri-star-line mr-2"></i>Premium</button>
+    <button class="nav-btn"><i class="ri-file-list-line mr-2"></i>My Orders</button>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="text-center py-10">
+  <h1 class="text-4xl font-bold text-gray-800 mb-2">🏆 Earn ExamFuel Coins</h1>
+  <p class="text-gray-500">Upload, share, and engage to earn coins you can redeem for rewards!</p>
+</header>
+
+<!-- Coin Balance -->
+<div class="flex justify-center mb-8">
+  <div class="bg-white rounded-full shadow px-6 py-3 flex items-center space-x-2 border border-gray-200">
+    <i class="ri-copper-coin-line text-yellow-400 text-2xl animate-spin-slow"></i>
+    <span class="text-lg font-semibold text-gray-800">Your Coins:</span>
+    <span id="userCoins" class="font-bold text-yellow-500 text-xl">7500</span>
+  </div>
+</div>
+
+<!-- Earn Coins Section -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10 pb-20 max-w-6xl mx-auto">
+
+  <!-- Upload Notes -->
+  <div class="earn-card">
+    <div class="flex items-center justify-center text-5xl text-indigo-500 mb-4">
+      <i class="ri-file-upload-line"></i>
+    </div>
+    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Upload Notes</h3>
+    <p class="text-gray-500 text-center mb-4">Contribute quality handwritten or typed notes to help others prepare better.</p>
+    <div class="text-center text-yellow-500 font-semibold"><i class="ri-copper-coin-fill"></i> +100 Coins</div>
+  </div>
+
+  <!-- Upload PYQs -->
+  <div class="earn-card">
+    <div class="flex items-center justify-center text-5xl text-green-500 mb-4">
+      <i class="ri-booklet-line"></i>
+    </div>
+    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Upload Previous Year Questions</h3>
+    <p class="text-gray-500 text-center mb-4">Submit authentic PYQs from any subject or exam to help the community.</p>
+    <div class="text-center text-yellow-500 font-semibold"><i class="ri-copper-coin-fill"></i> +300 Coins</div>
+  </div>
+
+  <!-- Invite Friends -->
+  <div class="earn-card">
+    <div class="flex items-center justify-center text-5xl text-orange-500 mb-4">
+      <i class="ri-user-add-line"></i>
+    </div>
+    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Invite Friends</h3>
+    <p class="text-gray-500 text-center mb-4">Share your referral code with friends and earn coins when they join ExamFuel.</p>
+    <div class="text-center text-yellow-500 font-semibold"><i class="ri-copper-coin-fill"></i> +500 Coins</div>
+  </div>
+
+  <!-- Share Notes -->
+  <div class="earn-card">
+    <div class="flex items-center justify-center text-5xl text-blue-500 mb-4">
+      <i class="ri-share-forward-line"></i>
+    </div>
+    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Share Notes Link</h3>
+    <p class="text-gray-500 text-center mb-4">Share your uploaded notes or PYQ link with friends and classmates.</p>
+    <div class="text-center text-yellow-500 font-semibold"><i class="ri-copper-coin-fill"></i> +100 Coins</div>
+  </div>
+
+  <!-- Give Feedback -->
+  <div class="earn-card">
+    <div class="flex items-center justify-center text-5xl text-purple-500 mb-4">
+      <i class="ri-chat-smile-2-line"></i>
+    </div>
+    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Give Feedback</h3>
+    <p class="text-gray-500 text-center mb-4">Help us improve ExamFuel by sharing your valuable feedback.</p>
+    <div class="text-center text-yellow-500 font-semibold"><i class="ri-copper-coin-fill"></i> +150 Coins</div>
+  </div>
+
+  <!-- Weekly Challenge -->
+  <div class="earn-card">
+    <div class="flex items-center justify-center text-5xl text-red-500 mb-4">
+      <i class="ri-lightbulb-flash-line"></i>
+    </div>
+    <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Join Weekly Contribution Drive</h3>
+    <p class="text-gray-500 text-center mb-4">Each week, top contributors earn bonus coins for active participation.</p>
+    <div class="text-center text-yellow-500 font-semibold"><i class="ri-copper-coin-fill"></i> +800 Coins</div>
+  </div>
+
+</section>
+
+<script>
+  // Example user coins (replace with dynamic user data)
+  let userCoins = 7500;
+  document.getElementById('userCoins').textContent = userCoins;
+</script>
+
+</body>
+</html>
+    

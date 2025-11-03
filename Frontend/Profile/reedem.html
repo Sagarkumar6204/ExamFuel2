@@ -1,57 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ExamFuel | Redeem Coins</title>
-<link rel="icon" href="logo.png" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="reedem.css">
-
+<style>
+  body {
+    background-color: #f6f7fb;
+    font-family: 'Inter', sans-serif;
+  }
+  .nav-btn {
+    @apply px-5 py-2 rounded-full font-semibold text-gray-700 bg-white shadow hover:text-indigo-600 transition;
+  }
+  .reward-card {
+    @apply bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition transform hover:-translate-y-1;
+  }
+  .coin-icon {
+    vertical-align: middle;
+  }
+</style>
 </head>
-<body class="bg-gradient-to-r from-purple-800 to-indigo-700 min-h-screen flex items-center justify-center">
+<body class="min-h-screen flex flex-col">
 
-<!-- Redeem Card -->
-<div class="bg-white rounded-3xl shadow-2xl p-10 max-w-md w-full relative">
-  <!-- Rotating Coin -->
-  <div class="flex justify-center mb-6 relative">
-    <i class="ri-copper-coin-line text-yellow-400 text-8xl rotate-coin coin-glow"></i>
-    <span id="coinCount" class="absolute -bottom-2 right-0 bg-purple-700 text-white rounded-full w-14 h-14 flex items-center justify-center text-xl font-bold shadow-lg">0</span>
+<!-- Navbar -->
+<nav class="bg-[#1e1e2f] text-white px-8 py-4 flex justify-between items-center shadow-md">
+  <div class="text-2xl font-bold text-yellow-400 flex items-center space-x-2">
+    <i class="ri-fire-line text-3xl"></i>
+    <span>ExamFuel</span>
   </div>
+  <div class="flex space-x-4">
+    <button class="nav-btn bg-yellow-400 text-white"><i class="ri-coin-line mr-2"></i>Redeem</button>
+    <button class="nav-btn"><i class="ri-coin-fill mr-2"></i ><a href="earn.html">Earn Coins</a></button>
 
-  <!-- Heading -->
-  <h2 class="text-3xl font-bold mb-2 text-center">Redeem Coins</h2>
-  <p class="text-gray-700 text-center mb-6">1500 Coins = ₹100</p>
-
-  <!-- Progress Bar -->
-  <div class="w-full bg-gray-200 rounded-full h-6 overflow-hidden mb-6">
-    <div id="coinProgress" class="h-6 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full transition-all duration-700" style="width:0%;"></div>
+    <button class="nav-btn"><i class="ri-file-list-line mr-2"></i>My Orders</button>
   </div>
-  <p class="text-center text-gray-600 mb-4"><span id="currentCoins">0</span> / 1500 Coins</p>
+</nav>
 
-  <!-- UPI Input -->
-  <input type="text" id="upiInput" placeholder="Enter UPI ID" class="w-full border border-gray-300 rounded-xl px-4 py-3 mb-6 focus:ring-2 focus:ring-indigo-500 outline-none" />
+<!-- Header -->
+<header class="text-center py-10">
+  <h1 class="text-4xl font-bold text-gray-800 mb-2">💰 Redeem Your Coins</h1>
+  <p class="text-gray-500">Use your ExamFuel Coins to claim exclusive rewards!</p>
+</header>
 
-  <!-- Redeem Button -->
-  <button id="redeemBtn" class="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-xl font-bold transition transform hover:scale-105 shadow-lg w-full flex justify-center items-center space-x-2">
-    <i class="ri-bank-card-line text-xl"></i>
-    <span>Redeem Now</span>
-  </button>
+<!-- Coins Display -->
+<div class="flex justify-center mb-8">
+  <div class="bg-white rounded-full shadow px-6 py-3 flex items-center space-x-2 border border-gray-200">
+    <i class="ri-copper-coin-line text-yellow-400 text-2xl animate-spin-slow"></i>
+    <span class="text-lg font-semibold text-gray-800">Your Coins:</span>
+    <span id="userCoins" class="font-bold text-yellow-500 text-xl">7500</span>
+  </div>
 </div>
+
+<!-- Rewards Section -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10 pb-20 max-w-6xl mx-auto">
+  <!-- Cards rendered by JS -->
+</section>
 
 <!-- Modal -->
-<div id="redeemModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-  <div class="bg-white text-gray-900 rounded-2xl p-8 max-w-sm w-full text-center fade-in relative overflow-hidden">
-    <div id="modalConfetti"></div>
-    <i id="modalIcon" class="ri-checkbox-circle-line text-6xl text-green-500 mb-4"></i>
+<div id="redeemModal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+  <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center">
+    <i id="modalIcon" class="ri-checkbox-circle-line text-6xl text-green-500 mb-4 animate-bounce"></i>
     <h3 id="modalTitle" class="text-2xl font-bold mb-2">Success!</h3>
-    <p id="modalMessage" class="text-gray-700 mb-6">You have successfully redeemed 1500 coins for ₹100.</p>
-    <button id="closeModal" class="bg-purple-700 text-white px-6 py-2 rounded-lg hover:bg-purple-800 transition">Close</button>
+    <p id="modalMessage" class="text-gray-700 mb-6">You have redeemed your reward successfully.</p>
+    <button id="closeModal" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Close</button>
   </div>
 </div>
 
-<script src="reedem.js"></script>
+<script>
+let userCoins = 7500; // Example user balance
+
+const rewards = [
+  { name: "Google Sticker", desc: "Get official Google-themed sticker pack.", cost: 500, img: "https://i.imgur.com/X0P3TWh.png" },
+  { name: "ExamFuel Pen", desc: "Exclusive ExamFuel branded pen.", cost: 5000, img: "pen.png" },
+  { name: "₹100 Cash Reward", desc: "Redeem 10,000 coins for ₹100 UPI transfer.", cost: 10000, img: "https://i.imgur.com/kZ5H3MZ.png" }
+];
+
+const grid = document.querySelector("section");
+const coinsEl = document.getElementById("userCoins");
+const modal = document.getElementById("redeemModal");
+const modalIcon = document.getElementById("modalIcon");
+const modalTitle = document.getElementById("modalTitle");
+const modalMessage = document.getElementById("modalMessage");
+const closeModal = document.getElementById("closeModal");
+
+function renderRewards() {
+  coinsEl.textContent = userCoins;
+  grid.innerHTML = rewards.map((r, i) => `
+    <div class="reward-card flex flex-col">
+      <div class="h-40 bg-gray-100 flex items-center justify-center">
+        <img src="${r.img}" alt="${r.name}" class="h-24 object-contain">
+      </div>
+      <div class="p-4 flex flex-col flex-grow">
+        <h3 class="text-lg font-semibold text-gray-800 mb-1">${r.name}</h3>
+        <p class="text-gray-500 text-sm mb-3 flex-grow">${r.desc}</p>
+        <div class="flex justify-between items-center">
+          <span class="text-yellow-500 font-semibold text-sm"><i class="ri-copper-coin-fill coin-icon"></i> ${r.cost}</span>
+          <button data-idx="${i}" ${userCoins < r.cost ? "disabled" : ""}
+            class="redeemBtn text-white px-3 py-1.5 rounded-lg text-sm font-semibold transition 
+            ${userCoins >= r.cost ? "bg-yellow-500 hover:bg-yellow-600" : "bg-gray-400 cursor-not-allowed"}">
+            ${userCoins >= r.cost ? "Redeem" : "Not Enough"}
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+  document.querySelectorAll(".redeemBtn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const idx = e.target.dataset.idx;
+      redeemReward(idx);
+    });
+  });
+}
+
+function redeemReward(i) {
+  const reward = rewards[i];
+  if (userCoins < reward.cost) return;
+
+  // Deduct coins
+  userCoins -= reward.cost;
+  renderRewards();
+
+  // Show modal
+  modal.classList.remove("hidden");
+  modalIcon.className = "ri-gift-line text-6xl text-yellow-500 mb-4 animate-bounce";
+  modalTitle.textContent = "Congratulations!";
+  modalMessage.textContent = `You have redeemed "${reward.name}" for ${reward.cost} coins!`;
+}
+
+closeModal.addEventListener("click", () => modal.classList.add("hidden"));
+renderRewards();
+</script>
 
 </body>
 </html>
