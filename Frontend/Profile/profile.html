@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="icon" href="logo.png" />
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="profile.css" />
   </head>
 
   <body class="text-gray-900">
@@ -22,7 +22,7 @@
         <div
           class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full"
         >
-                  <img src="logo.png" alt="" class="rounded-full" width="50px" />
+          <img src="logo.png" alt="" class="rounded-full" width="50px" />
         </div>
         <h1 class="text-2xl font-bold">
           Exam<span class="text-yellow-400">Fuel</span>
@@ -38,14 +38,17 @@
     <!-- Profile Section -->
     <section class="max-w-6xl mx-auto mt-12 mb-12 fade-in px-4 md:px-0">
       <!-- Profile Card -->
-      <div class="card mb-8">
+      <div class="card mb-8 w-full max-w-4xl mx-auto px-4">
         <div
-          class="flex flex-col md:flex-row items-center justify-between gap-6 border-b pb-8"
+          class="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6 border-b pb-8 bg-white rounded-2xl shadow-sm p-6"
         >
-          <div class="flex items-center space-x-6">
+          <!-- Left Section -->
+          <div
+            class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 w-full"
+          >
             <!-- Profile Image -->
             <div
-              class="relative w-28 h-28 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-4xl font-bold"
+              class="relative w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-3xl sm:text-4xl font-bold shrink-0"
               id="profileInitials"
             >
               NK
@@ -64,22 +67,34 @@
             </div>
 
             <!-- Profile Info -->
-            <div>
-              <h2 class="text-3xl font-bold text-gray-800" id="fullName">
-               
+            <div class="text-center sm:text-left">
+              <h2
+                class="text-2xl sm:text-3xl font-bold text-gray-800"
+                id="fullName"
+              >
+                Niraj Kumar
               </h2>
               <p class="text-gray-500 text-sm">@ExamFuel</p>
-              <div class="flex items-center space-x-4 mt-2 text-gray-600">
-  <span><i class="ri-mail-line mr-1"></i> <span id="userEmail"></span></span>
-  <span><i class="ri-phone-line mr-1"></i> <span id="userPhone"></span></span>
-</div>
 
+              <div
+                class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mt-3 text-gray-600 text-sm sm:text-base"
+              >
+                <span class="flex items-center justify-center sm:justify-start">
+                  <i class="ri-mail-line mr-1 text-indigo-600"></i>
+                  <span id="userEmail">test123@gmail.com</span>
+                </span>
+                <span class="flex items-center justify-center sm:justify-start">
+                  <i class="ri-phone-line mr-1 text-indigo-600"></i>
+                  <span id="userPhone">+91 1234567890</span>
+                </span>
+              </div>
             </div>
           </div>
 
+          <!-- Edit Button -->
           <button
             id="editProfileBtn"
-            class="mt-6 md:mt-0 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-lg font-medium flex items-center space-x-2 shadow-md transition"
+            class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-lg font-medium flex items-center justify-center space-x-2 shadow-md transition"
           >
             <i class="ri-edit-line"></i>
             <span>Edit Profile</span>
@@ -122,10 +137,13 @@
             </li>
           </ul>
           <div class="mt-6">
-    <a href="reedem.html" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg font-medium transition">
-      Redeem Coins
-    </a>
-  </div>
+            <a
+              href="reedem.html"
+              class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg font-medium transition"
+            >
+              Redeem Coins
+            </a>
+          </div>
         </div>
 
         <!-- Contributions Section -->
@@ -235,8 +253,6 @@
     </div>
 
     <!-- JS -->
-    <script src="profile.js">
-      
-    </script>
+    <script src="profile.js"></script>
   </body>
 </html>
